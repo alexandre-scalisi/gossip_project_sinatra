@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Afficher un potin</title>
+  </head>
+  <body>
+  <h1>PAGE COMMENTAIRES</h1>
+  <%if gossips[0][0]=="no comment"%>
+    <h3>Pas encore de commentaire </h3>
+  <%else%>
+    <% gossips[0].each_with_index do |gossip,i| %>
+    <h3>Commentaire n°<%= i+1%></h3>
+    <%if gossip.nil? then next end%>
+    Auteur : <%= gossip.split('-----')[0] %><br/>
+    Commentaire : <%= gossip.split('-----')[1] %><br/>
+    <% end %>
+    <%end%>
+ <a href="/"> page d'accueil</a>
+  </body>
+</html>

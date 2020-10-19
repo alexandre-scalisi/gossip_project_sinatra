@@ -4,14 +4,17 @@
   </head>
   <body>
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
+    <a href="http://localhost:4567/gossips/new/"> Lien pour créer des potins</a> <br>
     <% gossips.each_with_index do |gossip,i| %>
         <p>
           <%= gossip.author %><br/>
           <%= gossip.content %>
         </p>
-        <p>
-          <a href="http://localhost:4567/gossips/<%=(i+1)%>">Page du potin <%=(i+1)%> </a>
-        </p>
+        
+          <a href="http://localhost:4567/gossips/<%=(i+1)%>">Page du potin <%=(i+1)%> </a><br>
+
       <% end %>
+      <br><br>
+      <a href='/gossips/delete_all/'>Tout éffacer </a><br>
   </body>
 </html>

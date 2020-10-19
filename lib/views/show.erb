@@ -7,7 +7,10 @@
 <p>Voici la page du potin n°<%=id %> </p>
 <p>Son auteur : <%=gossips[0]%> </p>
 <p>Le contenu du potin : <%=gossips[1]%><p>
-<a href="http://localhost:4567/gossips/<%=id%>/edit/"> Lien pour éditer des potins</a> <br>
-<a href="http://localhost:4567/"> Lien pour revenir à la page des potins</a>
+<a href="/gossips/<%=id%>/edit/"> Lien pour éditer des potins</a> <br>
+<a href="/gossips/<%=id%>/comments/"> Lien pour laisser un commentaire</a> <br>
+<a href="/gossips/<%=id%>/show_comments/"> Lien pour voir les commentaires</a> <br>
+<a href="/"> Lien pour revenir à la page d'accueil</a>
+
   </body>
 </html>
